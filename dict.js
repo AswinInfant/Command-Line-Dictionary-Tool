@@ -49,8 +49,9 @@ commands.syn=async function (parsedWord) {
     const api_url = base+'words/randomWord?api_key='+API_KEY;
     const response = await fetch(api_url);
     const data = await response.json();
-   var mainWord=data.word
-   commands.dict(mainWord);
+    var mainWord=data.word;
+    console.log("Word of the day is:"+mainWord+"\n");
+    commands.dict(mainWord);
     }
 
   if (typeof commands[type] === 'function') {

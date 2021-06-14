@@ -143,7 +143,7 @@ var i;
    }
  }
 
- function scramble(a){
+ function jumble(a){
    a=a.split("");
    for(var b=a.length-1;0<b;b--){
      var c=Math.floor(Math.random()*(b+1));
@@ -166,7 +166,7 @@ function menu(option,apiword1){
   {
     if(hintExhaust==3){
       console.log("jumbled word");
-      console.log(scramble(apiword1));
+      console.log(jumble(apiword1));
       var guess = prompt('Guess the word');
     console.log(guess);
     check(guess,apiword1);

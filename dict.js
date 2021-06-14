@@ -1,7 +1,6 @@
 const lib = require("./game.js");
 const fetch = require("node-fetch");
 var https = require('follow-redirects').https;
-var fs = require('fs');
 var base='https://fourtytwowords.herokuapp.com/'; 
 var API_KEY= 'fb8007781a73a8884e3821dc8f330cf2949b422d2a4be2bac9f1d5def50213d48f04cf2869255230d8e5adc4bee08ed27035a7a65745b5184b37848e93a691c099b93b1b072f24ad7908352ed10947e3';
 const type = process.argv[2] ;
@@ -73,10 +72,8 @@ commands.ant=async function (parsedWord) {
    
   }
   commands.play = function ()  {
-    console.log("game starts in dict.js\n");
+    console.log("game starts");
     lib.gameplay();
-    
-   
   }
 
  
@@ -97,7 +94,3 @@ commands.ant=async function (parsedWord) {
   if (typeof commands[type] === "undefined") {
     day();
   }
-
-function print(){
-console.log(maindata);
-}
